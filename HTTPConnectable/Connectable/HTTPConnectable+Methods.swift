@@ -2,9 +2,9 @@ import Result
 
 extension HTTPConnectable {
 
-  public static func GETJSON(fromEndpoint   endpoint  : String,
-                             withParameters parameters: [String: String] = [:],
-                             andThen        then      : @escaping (Result<Data, HTTPConnectableErrorBox>) -> Void) {
+  public static func GETJSON<Self: Decodable>(fromEndpoint   endpoint  : String,
+                                              withParameters parameters: [String: String] = [:],
+                                              andThen        then      : @escaping (Result<Self, HTTPConnectableErrorBox>) -> Void) {
 
     GET(fromEndpoint: endpoint, withParameters: parameters, andThen: { result in
 
@@ -13,9 +13,11 @@ extension HTTPConnectable {
         then(Result(error: error))
 
       case .success(let data) :
+
         do {
-          _ = try JSONSerialization.jsonObject(with: data)
-          then(Result(data))
+          let decoded = try JSONDecoder().decode(Self.self, from: data)
+          then(Result(decoded))
+
         } catch {
           then(Result(error: HTTPConnectableErrorBox.jsonFailure(error)))
         }
