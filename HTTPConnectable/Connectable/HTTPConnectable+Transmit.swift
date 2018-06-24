@@ -58,9 +58,11 @@ extension HTTPConnectable {
       guard let baseURL = URL(string: path) else { throw NetworkError.invalidURL(path) }
       guard let scheme  = baseURL.scheme else { throw NetworkError.invalidURL(path) }
       guard let host    = baseURL.host else { throw NetworkError.invalidURL(path) }
-      guard var url     = URL(string: "\(scheme)://\(host)") else { throw NetworkError.invalidURL(path) }
 
-      if let port     = self.port { url.appendPathComponent(":\(port)") }
+      var urlString = "\(scheme)://\(host)"
+      if let port   = self.port { urlString = "\(scheme)://\(host):\(port)" }
+      guard var url = URL(string: urlString) else { throw NetworkError.invalidURL(path) }
+
       if let endpoint = endpoint { url.appendPathComponent(endpoint) }
 
       let config  = self.configuration
