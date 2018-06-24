@@ -13,7 +13,6 @@ build/*
 xcuserdata
 profile
 *.moved-aside
-xcshareddata
 Vendor
 Carthage
 *generated.swift
