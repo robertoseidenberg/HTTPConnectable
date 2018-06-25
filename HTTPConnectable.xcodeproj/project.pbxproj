@@ -18,6 +18,7 @@
 		A40583ED20DFE081005F960A /* HTTPConnectable+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583E420DFE081005F960A /* HTTPConnectable+Methods.swift */; };
 		A40583EE20DFE081005F960A /* HTTPConnectable+Transmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583E520DFE081005F960A /* HTTPConnectable+Transmit.swift */; };
 		A40583EF20DFE081005F960A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583E620DFE081005F960A /* JSON.swift */; };
+		A44122AC20E14AE400AF28FC /* HTTPConnectable+Transmit(Helpers).swift in Sources */ = {isa = PBXBuildFile; fileRef = A44122AB20E14AE400AF28FC /* HTTPConnectable+Transmit(Helpers).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		A40583E420DFE081005F960A /* HTTPConnectable+Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPConnectable+Methods.swift"; sourceTree = "<group>"; };
 		A40583E520DFE081005F960A /* HTTPConnectable+Transmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPConnectable+Transmit.swift"; sourceTree = "<group>"; };
 		A40583E620DFE081005F960A /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		A44122AB20E14AE400AF28FC /* HTTPConnectable+Transmit(Helpers).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPConnectable+Transmit(Helpers).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				A40583E420DFE081005F960A /* HTTPConnectable+Methods.swift */,
 				A40583E320DFE081005F960A /* HTTPConnectableErrorBox.swift */,
 				A40583E520DFE081005F960A /* HTTPConnectable+Transmit.swift */,
+				A44122AB20E14AE400AF28FC /* HTTPConnectable+Transmit(Helpers).swift */,
 				A40583E620DFE081005F960A /* JSON.swift */,
 			);
 			path = Connectable;
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40583E720DFE081005F960A /* ErrorCodeResponse.swift in Sources */,
+				A44122AC20E14AE400AF28FC /* HTTPConnectable+Transmit(Helpers).swift in Sources */,
 				A40583ED20DFE081005F960A /* HTTPConnectable+Methods.swift in Sources */,
 				A40583EC20DFE081005F960A /* HTTPConnectableErrorBox.swift in Sources */,
 				A40583EF20DFE081005F960A /* JSON.swift in Sources */,

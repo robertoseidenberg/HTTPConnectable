@@ -1,7 +1,19 @@
+public enum HTTPTransport: String {
+  case HTTP  = "http"
+  case HTTPS = "https"
+}
+
+public enum Endpoint {
+  case none
+  case fragment(String)
+  case url     (String)
+}
+
 enum HTTPMethod: String {
   case GET
   case POST
 }
+
 
 public typealias Headers = [Header.Name: Header.Value]
 
@@ -18,16 +30,21 @@ public struct Header {
 
 public protocol HTTPConnectable {
 
-  static var root         : String { get }
-  static var port         : Int? { get }
-  static var headers      : Headers? { get }
+  static var transport    : HTTPTransport           { get }
+  static var root         : String                  { get }
+  static var port         : Int?                    { get }
+  static var headers      : Headers?                { get }
   static var configuration: URLSessionConfiguration { get }
 }
 
 extension HTTPConnectable {
 
+  public static var transport: HTTPTransport {
+    return .HTTP
+  }
+
   public static var root: String {
-    return "http://127.0.0.1"
+    return "127.0.0.1"
   }
 
   public static var port: Int? {

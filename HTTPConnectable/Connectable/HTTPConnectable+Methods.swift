@@ -2,7 +2,7 @@ import Result
 
 extension HTTPConnectable {
 
-  public static func GETJSON<Self: Decodable>(fromEndpoint   endpoint  : String,
+  public static func GETJSON<Self: Decodable>(fromEndpoint   endpoint  : Endpoint,
                                               withParameters parameters: [String: String] = [:],
                                               andThen        then      : @escaping (Result<Self, HTTPConnectableErrorBox>) -> Void) {
 
