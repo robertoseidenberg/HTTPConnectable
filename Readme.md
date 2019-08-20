@@ -1,6 +1,6 @@
 ![Cookies!](docs/cookiemonster.png)
 
-# HTTPConnecable
+# HTTPConnectable
 
 Swift µframework providing a thin protocol based network abstraction layer
 
