@@ -10,7 +10,6 @@
 		A40583CB20DFE064005F960A /* HTTPConnectable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40583C120DFE064005F960A /* HTTPConnectable.framework */; };
 		A40583D020DFE064005F960A /* HTTPConnectableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583CF20DFE064005F960A /* HTTPConnectableTests.swift */; };
 		A40583D220DFE064005F960A /* HTTPConnectable.h in Headers */ = {isa = PBXBuildFile; fileRef = A40583C420DFE064005F960A /* HTTPConnectable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A40583E720DFE081005F960A /* ErrorCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583DC20DFE081005F960A /* ErrorCodeResponse.swift */; };
 		A40583E820DFE081005F960A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583DD20DFE081005F960A /* NetworkError.swift */; };
 		A40583E920DFE081005F960A /* Dictionary+QueryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583DF20DFE081005F960A /* Dictionary+QueryString.swift */; };
 		A40583EB20DFE081005F960A /* HTTPConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40583E220DFE081005F960A /* HTTPConnectable.swift */; };
@@ -38,7 +37,6 @@
 		A40583CA20DFE064005F960A /* HTTPConnectableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPConnectableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40583CF20DFE064005F960A /* HTTPConnectableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConnectableTests.swift; sourceTree = "<group>"; };
 		A40583D120DFE064005F960A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A40583DC20DFE081005F960A /* ErrorCodeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCodeResponse.swift; sourceTree = "<group>"; };
 		A40583DD20DFE081005F960A /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A40583DF20DFE081005F960A /* Dictionary+QueryString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+QueryString.swift"; sourceTree = "<group>"; };
 		A40583E220DFE081005F960A /* HTTPConnectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPConnectable.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				A40583E120DFE081005F960A /* Connectable */,
-				A40583DB20DFE081005F960A /* Error */,
 				A40583DE20DFE081005F960A /* Extensions */,
 				A40583DD20DFE081005F960A /* NetworkError.swift */,
 				A40583C420DFE064005F960A /* HTTPConnectable.h */,
@@ -106,14 +103,6 @@
 				A40583D120DFE064005F960A /* Info.plist */,
 			);
 			path = HTTPConnectableTests;
-			sourceTree = "<group>";
-		};
-		A40583DB20DFE081005F960A /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				A40583DC20DFE081005F960A /* ErrorCodeResponse.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		A40583DE20DFE081005F960A /* Extensions */ = {
@@ -246,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40583E720DFE081005F960A /* ErrorCodeResponse.swift in Sources */,
 				A44122AC20E14AE400AF28FC /* HTTPConnectable+Transmit(Helpers).swift in Sources */,
 				A40583ED20DFE081005F960A /* HTTPConnectable+Methods.swift in Sources */,
 				A40583EC20DFE081005F960A /* HTTPConnectableErrorBox.swift in Sources */,

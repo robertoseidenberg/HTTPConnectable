@@ -1,3 +1,5 @@
+import Foundation
+
 extension Dictionary where Key == String, Value == String {
 
   func queryString() throws -> String {

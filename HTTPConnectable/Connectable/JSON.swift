@@ -1,1 +1,1 @@
-public typealias JSON = [String: AnyObject]
+public typealias JSON = [String: String]

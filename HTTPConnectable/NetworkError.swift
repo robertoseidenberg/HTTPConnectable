@@ -1,3 +1,5 @@
+import Foundation
+
 public enum NetworkError: Error {
 
   public typealias Description     = String

@@ -1,3 +1,5 @@
+import Foundation
+
 public enum HTTPTransport: String {
   case HTTP  = "http"
   case HTTPS = "https"
@@ -14,18 +16,18 @@ enum HTTPMethod: String {
   case POST
 }
 
+enum MimeType: String {
+    case json = "application/json; charset=utf-8"
+}
 
-public typealias Headers = [Header.Name: Header.Value]
+public typealias Headers = [String: String]
 
 public struct Header {
 
   public enum Name: String {
     case contentType = "Content-Type"
-  }
-
-  public enum Value: String {
-    case applicationJSON = "application/json"
-  }
+    case accept = "Accept"
+    }
 }
 
 public protocol HTTPConnectable {
@@ -35,27 +37,4 @@ public protocol HTTPConnectable {
   static var port         : Int?                    { get }
   static var headers      : Headers?                { get }
   static var configuration: URLSessionConfiguration { get }
-}
-
-extension HTTPConnectable {
-
-  public static var transport: HTTPTransport {
-    return .HTTP
-  }
-
-  public static var root: String {
-    return "127.0.0.1"
-  }
-
-  public static var port: Int? {
-    return nil
-  }
-
-  public static var headers: Headers? {
-    return nil
-  }
-
-  public static var configuration: URLSessionConfiguration {
-    return URLSessionConfiguration.default
-  }
 }

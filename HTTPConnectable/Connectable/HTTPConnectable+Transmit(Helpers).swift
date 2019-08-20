@@ -1,3 +1,5 @@
+import Foundation
+
 extension HTTPConnectable {
 
   static func url(withFragment fragment: String? = nil, parameters: [String: String]) throws -> URL {
