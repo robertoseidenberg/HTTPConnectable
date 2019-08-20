@@ -23,8 +23,8 @@ extension UserConvertible {
 		// {"name": "Winnie-the-Pooh"}
 		// "result contains" a readily populated "User" objects 
 		Self.POST(json    : ["login" : email, "password": password],
-            toEndpoint: Endpoint.fragment("myapi/login"),
-            andThen   : { result in then(result) })
+                        toEndpoint: Endpoint.fragment("myapi/login"),
+                        andThen   : { result in then(result) })
 	}
 }
 ```
