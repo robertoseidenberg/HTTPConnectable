@@ -11,8 +11,7 @@ let package = Package(
         .library(name: "HTTPConnectable", targets: ["HTTPConnectable"]),
     ],
     targets: [
-        .target(name: "HTTPConnectable", path: "Source"),
-        .testTarget(name: "HTTPConnectableTests", dependencies: ["HTTPConnectable"]),
+        .target(name: "HTTPConnectable"),
     ],
     swiftLanguageVersions: [
         .v5
